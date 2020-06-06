@@ -172,22 +172,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><ol>
 <li>下载node.js  -&gt;直接百度然后安装</li>
 <li>win+r -&gt; cmd<br>1)输入node -v 检查node版本<br>2)输入npm -v 检查npm版本</li>
 <li>输入 npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a>  然后等待安装完成</li>
 <li>输入 cnpm install -g hexo-cli 等待安装完成</li>
 <li>输入 hexo -v 你就会发现hexo被安装完成了，博客也就搭建完成了！</li>
 </ol>
-<p>###默认目录：C:\User\多好的电脑<br>可以通过输入 d: 来进入D盘<br>    输入 cd \XXX 来进入XXX文件夹（如果XXX文件夹存在的话）<br>####写一条blog</p>
-<ol>
+<h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>默认目录：C:\User\多好的电脑<br>可以通过输入 d: 来进入D盘<br>    输入 cd \XXX 来进入XXX文件夹（如果XXX文件夹存在的话）</p>
+<h4 id="写一条blog"><a href="#写一条blog" class="headerlink" title="写一条blog"></a>写一条blog</h4><ol>
 <li>输入mkdir blog 你就会在  C:\Users\多好的电脑  目录下发现一个blog的文件夹，你所有写的博    客的内容都会存储在这个文件夹内</li>
 <li>输入 cd blog/  进入blog<br> 输入 pwd 查看路径是否正确</li>
 <li>输入 hexo init 即利用hexo初始化一个博客</li>
 <li>输入 hexo s 正式启动我们的博客 此时它会给我们生成一个本地的localhost:4000窗口，我们可       以在浏览器中输入localhost:4000访问</li>
 </ol>
-<p>###写一篇文章</p>
-<ol>
+<h3 id="写一篇文章"><a href="#写一篇文章" class="headerlink" title="写一篇文章"></a>写一篇文章</h3><ol>
 <li>输入hexo n “我的第一篇博客文章”</li>
 <li>可以输入dir 查看当前目录的文件</li>
 <li>输入 vim 我的第一篇博客文章.md  然后进入这篇博客，给它增加些内容（可以用VScode打开    md文件编辑）</li>
@@ -195,18 +194,16 @@
 </ol>
 <p>至此，hexo博客的搭建已经完成了，下面我们需要的就是把文章部署到远端去，好让别人能看到</p>
 <p>这里有一个免费的部署的方式就是部署到GitHub上去，通过GitHub的地址访问我们的博客。</p>
-<p>###如何将我们的博客部署到GitHub上公开使用：</p>
-<ol>
-<li>登录github 然后New repository<br> <em>注意！Repository name</em> 一定要是 ：你的昵称.github.io<br> 比如我的昵称是 x2532560155  举例就是： x2532560155.github.io</li>
+<h3 id="如何将我们的博客部署到GitHub上公开使用："><a href="#如何将我们的博客部署到GitHub上公开使用：" class="headerlink" title="如何将我们的博客部署到GitHub上公开使用："></a>如何将我们的博客部署到GitHub上公开使用：</h3><ol>
+<li>登录github 然后New repository<br> 注意！Repository name 一定要是 ：你的昵称.github.io<br> 比如我的昵称是 x2532560155  举例就是： x2532560155.github.io</li>
 <li>创建完成之后继续在cmd中：<br> 输入 cnpm install –save hexo-deployer-git  进行安装</li>
-<li>在文件夹中找到 _config.yml 文件，打开后在底部：<br> deploy: <pre><code>type: git
-repo: https://github.com/x2532560155/x2532560155.github.io.git
-branch: master</code></pre>完成后保存退出</li>
+<li>在文件夹中找到 _config.yml 文件，打开后在底部： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https:&#x2F;&#x2F;github.com&#x2F;x2532560155&#x2F;x2532560155.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+完成后保存退出</li>
 <li>cmd中输入hexo d<br> 然后登录GitHub就可以了<br>（如果错误就试试加上一句： git config –global user.name ‘你的用户名’）</li>
 <li>浏览器中打开网页： htts://x2532560155.github.io </li>
 <li>大功告成！！！</li>
 </ol>
-<p>###更换主题：</p>
+<h3 id="更换主题："><a href="#更换主题：" class="headerlink" title="更换主题："></a>更换主题：</h3><p>这里只举一个简单地例子：</p>
 <ol>
 <li>cmd输入 git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br> 这样就把yilia的主题复制到themes/yilia文件夹中了</li>
 <li>打开_config.yml 把theme更改成yilia</li>
